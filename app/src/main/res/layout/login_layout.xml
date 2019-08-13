@@ -65,6 +65,7 @@
         android:textColorHint="#A6F7F3F3"
         android:textColorLink="#CD111111"
         android:textCursorDrawable="?attr/colorControlHighlight"
+        android:inputType="textPassword"
         app:backgroundTint="#80000000" />
 
     <TextView

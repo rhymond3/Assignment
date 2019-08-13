@@ -64,7 +64,7 @@ public class Register extends AppCompatActivity {
 
                 if(isInserted = true){
                     Toast.makeText(getApplicationContext(),"Succesfuul Register",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Register.this,Home.class);
+                    Intent intent = new Intent(Register.this,HomeActivity.class);
                     startActivity(intent);
                 }
                 else

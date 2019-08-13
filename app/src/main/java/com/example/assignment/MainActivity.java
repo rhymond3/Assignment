@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     EditText username, password;
     Button login;
     TextView textViewUsername, textViewPassword;
+    private final String USERNAME = "username";
+    private final String PASSWORD = "password";
+    private String sharedPrefile = "login";
+    private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
         login = (Button)findViewById(R.id.login);
 
+        prefs = getSharedPreferences(sharedPrefile,MODE_PRIVATE);
+        if(prefs.getString(USERNAME,null)!=null && prefs.getString(PASSWORD,null)!=null){
+            Intent i = new Intent(MainActivity.this, HomeActivity.class );
+            startActivity(i);
+        }
     }
 
     public void RegisterPage(View view){
@@ -44,11 +54,15 @@ public class MainActivity extends AppCompatActivity {
     public void LoginAccount(View view){
         String UserName = username.getText().toString();
         String Password = password.getText().toString();
+        SharedPreferences.Editor preferenceEditor = prefs.edit();
         if(validate()){
             User currentUser = myDb.Authenticate(new User(null, UserName, null, Password));
             if (currentUser != null) {
+                preferenceEditor.putString(USERNAME,UserName);
+                preferenceEditor.putString(PASSWORD,Password);
+                preferenceEditor.apply();
                 Toast.makeText(getApplicationContext(),"Succesfuul Login",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Home.class);
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
             else
