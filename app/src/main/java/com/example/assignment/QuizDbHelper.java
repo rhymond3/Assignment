@@ -68,7 +68,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q10);
         Question q11 = new Question("I have trouble feeling hopeful." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q11);
-        Question q12 = new Question("I i find myself taking unnecessary risks or engaging in behaviour hazardous to health and/ or safety." , "Never", "Seldom", "Sometimes", "Often", "Always");
+        Question q12 = new Question("I find myself taking unnecessary risks or engaging in behaviour hazardous to health and/ or safety." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q12);
         Question q13 = new Question("I have back and neck pain, or other chronic tension-linked pain." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q13);
@@ -114,7 +114,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     public List<Question> getAllQuestion(){
         List<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM QUIZ LIMIT 3", null);
+        Cursor c = db.rawQuery("SELECT * FROM QUIZ ORDER BY random() LIMIT 10", null);
         if(c.moveToFirst()){
             do{
                 Question question = new Question();

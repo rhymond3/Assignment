@@ -18,7 +18,6 @@ public class Testing extends AppCompatActivity {
 
     private Button confirm;
     private TextView textViewQuestion;
-    private TextView textViewScore;
     private TextView textViewQuestionCount;
     private RadioGroup rbGroup;
     private RadioButton r1;
@@ -41,7 +40,6 @@ public class Testing extends AppCompatActivity {
         setContentView(R.layout.activity_testing);
 
         textViewQuestion = findViewById(R.id.textview_question);
-        textViewScore = findViewById(R.id.textview_score);
         textViewQuestionCount = findViewById(R.id.textview_question_count);
         rbGroup = findViewById(R.id.radio_group);
         r1 = findViewById(R.id.radio_button1);
@@ -112,24 +110,19 @@ public class Testing extends AppCompatActivity {
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNo = rbGroup.indexOfChild(rbSelected) +1;
         if(answerNo == 1){
-            score += 1;
-            textViewScore.setText("Score : " + score);
+            score += 0;
         }
         else if(answerNo == 2){
-            score += 2;
-            textViewScore.setText("Score : " + score);
+            score += 1;
         }
         else if(answerNo == 3){
-            score += 3;
-            textViewScore.setText("Score : " + score);
+            score += 2;
         }
         else if(answerNo == 4){
-            score += 4;
-            textViewScore.setText("Score : " + score);
+            score += 3;
         }
         else if (answerNo == 5){
-            score += 5;
-            textViewScore.setText("Score : " + score);
+            score += 4;
         }
 
     }
