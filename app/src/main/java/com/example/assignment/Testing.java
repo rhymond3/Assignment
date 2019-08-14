@@ -90,7 +90,7 @@ public class Testing extends AppCompatActivity {
 
             questionCounter++;
             textViewQuestionCount.setText("Question: " + questionCounter + "/" + questionCounterTotal);
-            confirm.setText("Confirm");
+            confirm.setText("Next");
             answered=false;
         }else{
             finishQuiz();
