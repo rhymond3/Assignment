@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestingFragment"
-    android:background="@drawable/relax1"
+    android:background="@drawable/relax2"
     >
 
     <TextView
