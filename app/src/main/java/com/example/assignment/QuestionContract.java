@@ -1,5 +1,4 @@
 package com.example.assignment;
-
 import android.provider.BaseColumns;
 
 public class QuestionContract {

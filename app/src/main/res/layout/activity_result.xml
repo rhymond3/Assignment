@@ -69,7 +69,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/button_rectangle"
+        android:background="@drawable/button1_rectangle"
         android:text="Finish"
         android:textSize="20dp"
         android:textStyle="bold"

@@ -1,11 +1,11 @@
 package com.example.assignment;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,6 +17,7 @@ import java.util.List;
 public class Testing extends AppCompatActivity {
 
     private Button confirm;
+    private ImageButton back;
     private TextView textViewQuestion;
     private TextView textViewQuestionCount;
     private RadioGroup rbGroup;
@@ -48,6 +49,7 @@ public class Testing extends AppCompatActivity {
         r4 = findViewById(R.id.radio_button4);
         r5 = findViewById(R.id.radio_button5);
         confirm = findViewById(R.id.button_confirm);
+        back = findViewById(R.id.imageButton);
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
         questionList = dbHelper.getAllQuestion();
@@ -70,6 +72,13 @@ public class Testing extends AppCompatActivity {
                 }else{
                     showNextQuestion();
                 }
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }
@@ -98,7 +107,7 @@ public class Testing extends AppCompatActivity {
     }
 
     private void finishQuiz(){
-        Intent intent = new Intent(this,Result.class);
+        Intent intent = new Intent(this, Result.class);
         intent.putExtra("result", score);
         startActivity(intent);
         finish();

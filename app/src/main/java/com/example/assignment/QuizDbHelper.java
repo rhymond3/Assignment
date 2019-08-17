@@ -5,8 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.example.assignment.QuestionContract.*;
 import java.util.ArrayList;
+
+import com.example.assignment.QuestionContract.*;
+
 import java.util.List;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
@@ -78,7 +80,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q15);
         Question q16 = new Question("I have nervous habits(e.g. biting my nails, grinding my teeth, fidgeting, pacing, etc)." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q16);
-        Question q17 = new Question("I forget little things (e.g. where i put my keys, people's names, details discussed during the last work meeting)." , "Never", "Seldom", "Sometimes", "Often", "Always");
+        Question q17 = new Question("I forget little things (e.g. where I put my keys, people's names, details discussed during the last work meeting)." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q17);
         Question q18 = new Question("I have stomach upset(e.g. nausea, vomiting, diarrhea, constipation, gas)." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q18);
@@ -88,7 +90,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q20);
         Question q21 = new Question("I find it hard to concentrate." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q21);
-        Question q22 = new Question("I have trouble feeling that my ife is meaningful." , "Never", "Seldom", "Sometimes", "Often", "Always");
+        Question q22 = new Question("I have trouble feeling that my life is meaningful." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q22);
         Question q23 = new Question("I am withdrawn and feel distant and cut off from other people." , "Never", "Seldom", "Sometimes", "Often", "Always");
         addQuestion(q23);

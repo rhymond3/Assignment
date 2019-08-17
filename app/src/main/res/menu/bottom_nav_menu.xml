@@ -14,4 +14,10 @@
         android:id="@+id/navigation_relax"
         android:icon="@drawable/ic_library_music"
         android:title="Relax" />
+
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/ic_menu"
+        android:title="Menu" />
+
 </menu>

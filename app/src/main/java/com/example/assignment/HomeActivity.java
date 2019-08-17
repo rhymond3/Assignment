@@ -4,11 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -28,6 +28,9 @@ public class HomeActivity extends AppCompatActivity {
                 case R.id.navigation_relax:
                     selectedFragment = new RelaxFragment();
                     break;
+                case R.id.navigation_menu:
+                    selectedFragment = new MenuFragment();
+                    break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
             return true;
@@ -42,5 +45,6 @@ public class HomeActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
     }
 }

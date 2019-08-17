@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.DigitalClock;
 import android.widget.TextView;
 
+import com.example.assignment.R;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -24,7 +26,6 @@ public class HomeFragment extends Fragment {
     public HomeFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

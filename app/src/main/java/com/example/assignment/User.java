@@ -1,5 +1,4 @@
 package com.example.assignment;
-
 public class User {
     public String id;
     public String userName;
