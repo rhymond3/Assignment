@@ -47,8 +47,7 @@ public class RelaxFragment extends Fragment {
         music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), MusicActivity.class);
-                startActivity(intent);
+
             }
         });
         return view;

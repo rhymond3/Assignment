@@ -23,7 +23,6 @@
         <activity android:name=".Testing" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".Register" />
-        <activity android:name=".MusicActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
